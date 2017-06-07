@@ -22,7 +22,7 @@
   "scripts": {
     "clean": "rimraf dist lib",
     "release": "npm version patch && npm publish --access public",
-    "prepublish": "npm run clean && npm run lint && npm run build",
+    "prepublishOnly": "npm run clean && npm run lint && npm run build",
     "lint": "eslint src/",
     "changelog": "git log `git describe --tags --abbrev=0`..HEAD --no-merges --pretty=format:' * %Cblue%s%Creset (%an)' | grep -v 'Merge'",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
