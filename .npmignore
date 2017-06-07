@@ -1,0 +1,7 @@
+.idea/
+node_modules/
+example/dist/
+yarn.lock
+.yarnclean
+webpack.config.js
+webpack.example.js
