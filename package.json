@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "clean": "rimraf dist lib",
-    "release": "npm version patch && npm publish --access public",
+    "release": "npm version patch && npm publish --access public && git push --tags",
     "prepublishOnly": "npm run clean && npm run lint && npm run build",
     "lint": "eslint src/",
     "changelog": "git log `git describe --tags --abbrev=0`..HEAD --no-merges --pretty=format:' * %Cblue%s%Creset (%an)' | grep -v 'Merge'",
